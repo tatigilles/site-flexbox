@@ -1,0 +1,320 @@
+// RESET
+*{
+    margin: 0;
+    padding: 0;
+    font-size:100%;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+nav,ul{list-style: none;}
+a{text-decoration: none; cursor: pointer;opacity:0.9 ;}
+a:hover{opacity: 0.9;}
+
+// Variaveis
+$cortext:#191c03;
+$corbranco:#fff;
+$coricones:#c3c63b;
+
+// HEADER
+
+header{
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background-color: $corbranco;
+
+     img{
+        width: 200px;
+    }
+    nav{
+        display: flex;
+    }
+    li{
+     margin: 0 15px;
+        a{
+            color:$cortext;
+        }
+    } 
+    li:first-child{
+        margin-left:0;
+    }
+    li:last-child{
+        margin-right: 0;
+    }
+}
+@media (max-width: 700px){
+    header{
+        flex-direction: column;
+        img{
+            margin-bottom: 20px;
+        }
+    }
+}
+
+// HERO
+.hero{
+    background-image: url(../img/hero.jpg);
+    background-size: cover;
+    min-height: 100vh;
+    color: $corbranco;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+
+    h1{
+        font-size:3.3rem;
+        margin-bottom: 15px;
+    }
+    h3{
+        font-size:2rem;
+        margin-bottom: 15px;
+    }
+    .btn{
+        background-color: $corbranco;
+        border-radius:4px;
+        color:$cortext;
+        padding: 20px 50px;
+        text-transform: uppercase;
+    }
+    .btn:hover{
+        background-color:$cortext;
+        color: $corbranco;
+    }
+}
+@media (max-width: 700px){
+    .hero{
+        h1{
+        font-size:2.5rem;
+        }
+        h3{
+            font-size: 1.5rem;
+        }
+    }
+}
+
+// CONHEÇA O HOTEL
+
+.conheca{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 100px 50px;
+
+    h3{
+        font-size: 2rem;
+        margin-bottom: 35px;
+        color: $cortext;
+        text-align: center;
+    }
+
+    p{
+        max-width: 800px;
+        margin-bottom: 35px;
+        color: $cortext;
+        text-align: center;
+    }
+
+    hr{
+        width: 200px;
+        height: 2px;
+        background-color: $cortext;
+        margin-bottom: 70px;
+        border: none;
+    }
+
+    .grid{
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+
+        li{
+            height: 350px;
+            padding: 20px;
+            border-radius: 4px;
+            background-clip: content-box;
+            background-size: cover;
+            background-position: center;
+    }
+    li.small{
+        flex-basis: 40%;
+    }
+    li.large{
+        flex-basis: 60%;
+    }
+}
+}
+@media (max-width: 700px){
+    .conheca{
+        .grid{
+            li.small{
+                flex-basis: 100%;
+            }
+            li.large{
+                flex-basis: 100%;
+            }
+        }
+    }
+}
+// Caracteristicas
+
+.caracteristicas{
+    background-color: $cortext;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 100px 50px;
+
+    h3{
+        font-size: 2rem;
+        margin-bottom: 35px;
+        color: $corbranco;
+        text-align: center;
+    }
+
+    p{
+        max-width: 800px;
+        margin-bottom: 35px;
+        color: $corbranco;
+        text-align: center;
+    }
+
+    hr{
+        width: 200px;
+        height: 2px;
+        background-color: $corbranco;
+        margin-bottom: 70px;
+        border: none;
+    }
+
+    .grid{
+        width: 100%;
+        display: flex;
+        li{
+            padding: 0 30px;
+            text-align: center;
+        i{
+            color: $coricones;
+            font-size: 3.5rem;
+            margin-bottom: 30px;
+        }
+        h4{
+            font-size: 1.5rem;
+            color: $coricones;
+            margin-bottom: 30px;
+        }
+        p{
+            color: $corbranco;
+        }
+        }
+
+    }
+}
+@media (max-width: 850px){
+    .caracteristicas{
+        .grid{
+            flex-direction: column;
+        }
+    }
+}
+
+// Newsletter
+.news{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 100px 50px;
+
+    h3{
+        font-size: 2rem;
+        margin-bottom: 35px;
+        color: $coricones;
+        text-align: center;
+    }
+
+    p{
+        max-width: 800px;
+        margin-bottom: 35px;
+        color: $coricones;
+        text-align: center;
+    }
+
+    hr{
+        width: 200px;
+        height: 2px;
+        background-color: $coricones;
+        margin-bottom: 70px;
+        border: none;
+    }
+
+    form{
+        width: 80%;
+        max-width: 800px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+
+        input{
+            padding: 15px;
+            border: 1px solid $coricones;
+            border-radius: 4px;
+            margin-right: 15px;
+            flex: 1;
+        }
+    }
+    button{
+        padding: 15px;
+        background-color: $coricones;
+        color: $corbranco;
+        text-transform: uppercase;
+        border:none;
+        border-radius: 4px;
+        cursor: pointer;
+
+
+    }
+}
+@media (max-width: 700px){
+    .news{
+        input{
+            flex-basis: 100%;
+            margin-bottom: 15px;
+        }
+    }
+}
+// FOOTER
+footer{
+    display: flex;
+    flex-direction: column;
+    background-color: $cortext;
+    padding: 50px;
+    align-items: center;
+    ul{
+        display: flex;
+        margin-bottom: 25px;
+
+    li{
+        margin-right: 10px;
+
+        &:last-child{
+            margin-right: 0;
+        }
+     a{
+         color: $coricones;
+         font-size: 2rem;
+
+     }
+    }
+    }
+    p{
+        color: $coricones;
+        text-align: center;
+    }
+}
